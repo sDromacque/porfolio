@@ -4,6 +4,9 @@
  *= require_self
  */
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 $dark: #424652;
 $light: #9a9da4;
 $highlight: #8bc6db;
