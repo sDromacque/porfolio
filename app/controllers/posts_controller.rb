@@ -31,8 +31,13 @@ class PostsController < ApplicationController
     if @post.update post_params
       redirect_to @post, notice: "Article update"
     else
-      render 'edit'
+      render :action => 'edit'
     end
+  end
+
+  def destroy
+    @post.destroy
+    redirect_to :action => 'index'
   end
 
   private
