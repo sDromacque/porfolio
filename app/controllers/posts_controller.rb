@@ -23,6 +23,18 @@ class PostsController < ApplicationController
 
   end
 
+  def edit
+
+  end
+
+  def update
+    if @post.update post_params
+      redirect_to @post, notice: "Article update"
+    else
+      render 'edit'
+    end
+  end
+
   private
 
   def post_params
