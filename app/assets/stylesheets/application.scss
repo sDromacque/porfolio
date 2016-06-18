@@ -15,6 +15,10 @@ $light: #9a9da4;
 $highlight: #8bc6db;
 $border: #E9E9E9;
 
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
 .clearfix:before,
 .clearfix:after{
   content: " ";
@@ -48,7 +52,7 @@ $border: #E9E9E9;
       color: $dark;
       text-decoration: none;
       margin: 0 1em;
-      font-size: 1rem;
+      font-size: 1.5rem;
     }
   }
 }

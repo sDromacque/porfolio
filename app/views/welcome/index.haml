@@ -1,0 +1,36 @@
+.wrapper.clearfix
+  .row
+    .col-md-4.homepage_content
+      %h2 About
+      %hr
+      %p In tincidunt nulla eu velit maximus placerat. Phasellus vehicula lectus vel tortor suscipit consectetur. Integer posuere nulla in ipsum commodo, eget bibendum odio sollicitudin. Praesent gravida nisi orci, quis ultricies felis placerat sit amet. Vivamus viverra feugiat velit nec rhoncus. Cras sagittis id mauris ac imperdiet. Nullam nec massa id sapien blandit sagittis. Quisque cursus felis facilisis tellus ullamcorper vehicula. Morbi placerat
+      %p
+        lectus quis rhoncus
+        = succeed " cursus, nulla mauris pellentesque velit, nec sollicitudin arcu mauris ut enim. Suspendisse bibendum dolor sit amet augue lacinia fermentum. " do
+          %a{:href => "#"} Link
+      %p Maecenas maximus ipsum et nisl pulvinar, non aliquet arcu convallis. Curabitur diam elit, viverra dignissim eleifend nec, porta ac mi. Ut ut pellentesque nisl. Sed ac orci pretium, scelerisque risus vel, tincidunt nulla. Proin viverra nulla id ornare lacinia. Donec lobortis vulputate lacus, nec ullamcorper ante sollicitudin non.
+    .col-md-4.homepage_content
+      %h2 Post
+      %hr
+      - @posts.each do |post|
+        %h3
+          =link_to post.title, post
+        %p
+          = truncate(post.content, :length => 255)
+        .date
+          %p
+            =post.created_at.strftime("%m/%d/%Y")
+
+    .col-md-4.homepage_content
+      %h2 Project
+      %hr
+      %h3 Todo list
+      %p Ubi est placidus canis?
+      %h2 Project
+      .date
+        %p Friday April 10th
+      %hr
+      %h3 Todo list
+      %p Ubi est placidus canis?
+      .date
+        %p Today

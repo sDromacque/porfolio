@@ -1,6 +1,7 @@
 %header#main_navigation.clearfix
-  %a.name{:href => "#"} Home
+  =link_to 'Home', root_path, class: 'name'
+
   %nav
-    %a{:href => "#"} Articles
+    =link_to 'Articles', posts_path
     %a{:href => "#"} Projects
     %a{:href => "#"} Contact
