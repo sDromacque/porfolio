@@ -10,18 +10,16 @@
           %a{:href => "#"} Link
       %p Maecenas maximus ipsum et nisl pulvinar, non aliquet arcu convallis. Curabitur diam elit, viverra dignissim eleifend nec, porta ac mi. Ut ut pellentesque nisl. Sed ac orci pretium, scelerisque risus vel, tincidunt nulla. Proin viverra nulla id ornare lacinia. Donec lobortis vulputate lacus, nec ullamcorper ante sollicitudin non.
     .col-md-4.homepage_content
-      %h2 Project
+      %h2 Post
       %hr
-      %h3 Todo list
-      %p Ubi est placidus canis?
-      %h2 Project
-      %hr
-      %h3 Todo list
-      %p Ubi est placidus canis?
-      %h2 Project
-      %hr
-      %h3 Todo list
-      %p Ubi est placidus canis?
+      - @posts.each do |post|
+        %h3
+          =link_to post.title, post
+        %p
+          = truncate(post.content, :length => 255)
+        .date
+          %p
+            =post.created_at.strftime("%m/%d/%Y")
 
     .col-md-4.homepage_content
       %h2 Project

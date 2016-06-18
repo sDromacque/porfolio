@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
 
   def index
+    @posts = Post.order('Created_at').limit(3)
   end
 
   def new
