@@ -1,2 +1,10 @@
-- @posts.each do |post|
-  =post.title
+#content_articles
+  - @posts.each do |post|
+    %article
+      %header
+        %time.date
+          =post.created_at.strftime('%m/%d/%Y')
+        =link_to post.title, post
+      .content
+        =post.content
+      %footer

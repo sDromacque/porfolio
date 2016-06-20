@@ -75,7 +75,7 @@ body{
     margin-bottom: .5em;
   }
   .date{
-    fon-size: .85em;
+    font-size: .85em;
     margin-bottom: 2em;
     color: $light
   }
@@ -104,5 +104,28 @@ footer{
     i:hover{
       color: $highlight;
     }
+  }
+}
+#content_articles{
+  width:80%;
+  margin: 0 auto;
+  header{
+    text-align: center;
+    .date{
+      font-size: .85em;
+      color: $light;
+      display: block;
+    }
+  }
+  .content{
+    text-align: center;
+  }
+  footer{
+    border-top: 2px solid $highlight;
+    width: 3em;
+    margin: 2rem auto 0;
+  }
+  article:last-child > footer{
+    border-top: none;
   }
 }
