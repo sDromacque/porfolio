@@ -1,9 +1,18 @@
-%article
+%article#post_show_content.skinny_wrapper
   %header
     %time.date
-      =@post.created_at.strftime("%m/%d/%Y")
-      =@post.title
+      =@post.created_at.strftime('%m/%d/%Y')
+      %h1
+        =@post.title
+  %hr
   %content
     =@post.content
-    =link_to "Edit", edit_post_path(@post)
-    =link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?"}
+  %hr
+  %footer
+    %p
+      Partager cette article
+    %nav
+    %a{:href => "#"}
+      %i.fa.fa-twitter.fa-2x{'aria-hidden' => 'true' }
+      %i.fa.fa-linkedin.fa-2x{'aria-hidden' => 'true' }
+      %i.fa.fa-github.fa-2x{'aria-hidden' => 'true' }
