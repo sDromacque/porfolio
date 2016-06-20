@@ -8,11 +8,10 @@
   %content
     =@post.content
   %hr
-  %footer
+  #share_article
     %p
       Partager cette article
     %nav
-    %a{:href => "#"}
-      %i.fa.fa-twitter.fa-2x{'aria-hidden' => 'true' }
-      %i.fa.fa-linkedin.fa-2x{'aria-hidden' => 'true' }
-      %i.fa.fa-github.fa-2x{'aria-hidden' => 'true' }
+      %a{:onclick => "javascript:window.open('http://twitter.com/share?text=#{@post.title} by @sdromacque - &url=#{url_for([@post, {only_path: false}])}', '_blank', 'width=800, height=500, top=200, left=300');void(0);"}
+        %i.fa.fa-twitter.fa-2x
+      -#todo other link
