@@ -16,7 +16,7 @@
         %h3
           =link_to post.title, post
         %p
-          = truncate(post.content, :length => 255)
+          = truncate(post.content, length: 255)
         .date
           %p
             =post.created_at.strftime("%m/%d/%Y")

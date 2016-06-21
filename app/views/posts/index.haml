@@ -6,5 +6,5 @@
           =post.created_at.strftime('%m/%d/%Y')
         =link_to post.title, post
       .content
-        =post.content
+        =markdown post.content
       %footer
