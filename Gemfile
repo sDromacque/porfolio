@@ -47,7 +47,7 @@ group :development do
   gem 'spring'
   gem 'sqlite3'
   gem 'quiet_assets'
-
+  gem 'better_errors'
 end
 
 group :production do
