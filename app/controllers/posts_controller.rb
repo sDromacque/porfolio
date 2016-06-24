@@ -14,31 +14,29 @@ class PostsController < ApplicationController
     @post = Post.new post_params
 
     if @post.save
-      redirect_to @post, notice: "Save"
+      redirect_to @post, notice: 'Save'
     else
-      render 'new', notice: "Fail"
+      render 'new', notice: 'Fail'
     end
   end
 
   def show
-
   end
 
   def edit
-
   end
 
   def update
     if @post.update post_params
-      redirect_to @post, notice: "Article update"
+      redirect_to @post, notice: 'Article update'
     else
-      render :action => 'edit'
+      render action: 'edit'
     end
   end
 
   def destroy
     @post.destroy
-    redirect_to :action => 'index'
+    redirect_to action: 'index'
   end
 
   private
