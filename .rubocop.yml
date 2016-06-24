@@ -1,0 +1,12 @@
+AllCops:
+  Exclude:
+    - 'bin/*'
+    - 'test/*'
+    - 'db/schema.rb'
+Style/Encoding:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 555
+Documentation:
+    Enabled: false

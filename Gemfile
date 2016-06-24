@@ -48,6 +48,7 @@ group :development do
   gem 'sqlite3'
   gem 'quiet_assets'
   gem 'better_errors'
+  gem 'rubocop'
 end
 
 group :production do
