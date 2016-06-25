@@ -1,5 +1,4 @@
 class Project < ActiveRecord::Base
   validates :title, :description, :link, presence: true
-  ActiveValidators.activate(:all)
-
+  validates :link, :url => { :message => 'Erreur dans url'}
 end
