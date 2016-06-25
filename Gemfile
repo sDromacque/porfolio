@@ -12,6 +12,7 @@ gem 'haml'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
+gem 'activevalidators'
 
 # Markdown
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'

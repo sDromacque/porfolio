@@ -1,5 +1,5 @@
 class Project < ActiveRecord::Base
-  validates :title, presence: {
-      message: 'need titre'
-  }
+  validates :title, :description, :link, presence: true
+  ActiveValidators.activate(:all)
+
 end
