@@ -23,7 +23,17 @@ class ProjectsController < ApplicationController
   end
 
   def show
+  end
 
+  def edit
+  end
+
+  def update
+    if @project.update post_params
+      redirect_to @project, notice: 'Project update'
+    else
+      render action: 'edit'
+    end
   end
 
   private

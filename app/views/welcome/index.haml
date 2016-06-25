@@ -24,13 +24,11 @@
     .col-md-4.homepage_content
       %h2 Project
       %hr
-      %h3 Todo list
-      %p Ubi est placidus canis?
-      %h2 Project
-      .date
-        %p Friday April 10th
-      %hr
-      %h3 Todo list
-      %p Ubi est placidus canis?
-      .date
-        %p Today
+        - @projects.each do |project|
+          %h3
+            =link_to project.title, project
+          %p
+            = truncate(project.description, length: 255)
+          .date
+            %p
+              =project.created_at.strftime('%m/%d/%Y')
