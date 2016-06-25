@@ -17,8 +17,7 @@ class ProjectsController < ApplicationController
       flash[:success] = 'Project enregistré.'
       redirect_to @project
     else
-      flash[:danger] = 'Erreur dans le formulaire'
-      render 'new'
+      render 'new', notice: 'Fail'
     end
   end
 
