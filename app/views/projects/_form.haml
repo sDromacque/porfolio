@@ -1,0 +1,8 @@
+=form_for @project do |f|
+  .form-group
+    = f.text_field(:title, class: 'form-control', autofocus: true, placeholder: 'Titre')
+  .form-group
+    = f.text_area(:description, class: 'form-control', placeholder: 'Description')
+  .form-group
+    = f.text_field(:link, class: 'form-control', placeholder: 'Lien')
+  = f.submit(class: 'btn btn-success center-block')
