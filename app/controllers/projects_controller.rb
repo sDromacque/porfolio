@@ -14,7 +14,8 @@ class ProjectsController < ApplicationController
     @project = Project.new post_params
 
     if @project.save
-      redirect_to @project, notice: 'Save'
+      flash[:success] = 'Project enregistré.'
+      redirect_to @project
     else
       render 'new', notice: 'Fail'
     end
