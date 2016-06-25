@@ -7,6 +7,6 @@ Style/Encoding:
   Enabled: false
 
 Metrics/LineLength:
-  Max: 200
+  Max: 555
 Documentation:
     Enabled: false
