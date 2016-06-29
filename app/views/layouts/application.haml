@@ -11,10 +11,5 @@
     =render 'layouts/header'
     =render 'layouts/flash_message'
 
-    - if notice
-      %p.notice= notice
-    - else
-      %p.alert= alert
-
     = yield
     =render 'layouts/footer'
