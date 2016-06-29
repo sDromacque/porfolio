@@ -3,7 +3,7 @@
     %article
       %header
         %time.date
-          =project.created_at.strftime('%m/%d/%Y')
+          =project.created_at.strftime('%d/%m/%Y')
         =link_to project.title, project
       .content
         = project.description

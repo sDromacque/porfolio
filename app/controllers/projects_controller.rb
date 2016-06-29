@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
 
   def index
-    @projects = Project.all.page(params[:page])
+    @projects = Project.all.order(created_at: :desc).page(params[:page])
   end
 
   def new

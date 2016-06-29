@@ -3,7 +3,7 @@
     %article
       %header
         %time.date
-          =post.created_at.strftime('%m/%d/%Y')
+          =post.created_at.strftime('%d/%m/%Y')
         =link_to post.title, post
       .content
         =markdown post.content
