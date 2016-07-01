@@ -2,7 +2,9 @@
   %p.copyright.text-center
     &copy; 2016 Dromacque Sébastien
   %nav
-    %a{:href => "#"}
-      %i.fa.fa-twitter.fa-2x{"aria-hidden" => "true"}
-      %i.fa.fa-linkedin.fa-2x{"aria-hidden" => "true"}
-      %i.fa.fa-github.fa-2x{"aria-hidden" => "true"}
+    = link_to 'https://twitter.com/Sdromacque', target: '_blank' do
+      %i.fa.fa-twitter.fa-2x
+    = link_to 'https://www.linkedin.com/in/s%C3%A9bastien-dromacque-a23505bb?trk=nav_responsive_tab_profile_pic', target: '_blank' do
+      %i.fa.fa-linkedin.fa-2x
+    = link_to 'https://github.com/sDromacque', target: '_blank' do
+      %i.fa.fa-github.fa-2x
