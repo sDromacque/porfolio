@@ -1,12 +1,21 @@
 %footer
-  %p.copyright.text-center
-    &copy; 2016 Dromacque Sébastien
-  %nav
-    = link_to 'https://twitter.com/Sdromacque', target: '_blank' do
-      %i.fa.fa-twitter.fa-2x
-    = link_to 'https://www.linkedin.com/in/s%C3%A9bastien-dromacque-a23505bb?trk=nav_responsive_tab_profile_pic', target: '_blank' do
-      %i.fa.fa-linkedin.fa-2x
-    = link_to 'https://github.com/sDromacque', target: '_blank' do
-      %i.fa.fa-github.fa-2x
-    = link_to 'https://www.viadeo.com/p/0021j5jh8mfm3dzt/edit?viewType=main', target: '_blank' do
-      %i.fa.fa-viadeo.fa-2x
+  .row
+    .col-md-4
+    .col-md-4.text-center
+      %i.fa.fa-envelope-o
+        %adress
+          sdromacque@gmail.com
+      %p.copyright
+        &copy; 2016 Dromacque Sébastien
+    .col-md-1
+      = link_to image_tag('cv.png'), asset_path('DromacqueSebastienCv.pdf'), target: '_blank'
+    .col-md-3
+      %nav
+        = link_to 'https://twitter.com/Sdromacque', target: '_blank' do
+          %i.fa.fa-twitter.fa-2x
+        = link_to 'https://www.linkedin.com/in/s%C3%A9bastien-dromacque-a23505bb?trk=nav_responsive_tab_profile_pic', target: '_blank' do
+          %i.fa.fa-linkedin.fa-2x
+        = link_to 'https://github.com/sDromacque', target: '_blank' do
+          %i.fa.fa-github.fa-2x
+        = link_to 'https://www.viadeo.com/p/0021j5jh8mfm3dzt/edit?viewType=main', target: '_blank' do
+          %i.fa.fa-viadeo.fa-2x
