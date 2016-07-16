@@ -16,10 +16,10 @@
         %h3
           =link_to post.title, post
         %p
-          = truncate(post.content, length: 255)
+          = post.resume
         .date
           %p
-            =post.created_at.strftime("%m/%d/%Y")
+            = post.created_at.strftime("%m/%d/%Y")
 
     .col-md-4.homepage_content
       %h2 Project
