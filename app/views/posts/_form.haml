@@ -1,20 +1,13 @@
-= form_for @post do |f|
-  - if @post.errors.any?
-    %h2
-      = pluralize(@post.errors.count, "error")
-      prevented this post from saving:
-    %ul
-      - @posts.errors.full_messages.each do |msg|
-        %li= msg
+- if @post.errors.any?
+  - @post.errors.messages.each do |message|
+    .message= message.last.last.html_safe
 
+= form_for @post do |f|
   .form-group
-    = f.label :title
-    = f.text_field(:title, class: 'form-control')
+    = f.text_field(:title, class: 'form-control', autofocus: true, placeholder: 'Titre')
   .form-group
-    = f.label :resume
-    = f.text_field(:resume, class: 'form-control')
+    = f.text_field(:resume, class: 'form-control', placeholder: 'Résume')
   .form-group
-    = f.label :content
-    = f.text_area(:content, class: 'form-control')
+    = f.text_area(:content, class: 'form-control', placeholder: 'Contenue')
 
   = f.submit(class: 'btn btn-success center-block')
